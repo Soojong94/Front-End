@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+
+        표를 만들어야 함 
+
+1) 표를 만들어야겠다고 선언 : <table>
+2) 몇 줄(행)을 만든다 : <tr> (table row) 
+3) 몇 칸(열)을 만든다 : <td> (table data) 
+4) 안에 내용을 채운다 : td의 content 채워줌 
+
+     -->
+    <!-- 1) 테이블을 만들겠다고 선언하는 공간 : table -->
+
+    <table border="10px  black">
+
+        <!-- 표의 제목 :  caption -->
+        <caption>메뉴판</caption>
+
+        <!-- 2) 테이블의 한 줄을 생성하는 방법 : 
+        table row 줄임말 <tr></tr>
+        -> 3줄 만들고 싶으면 tr * 3 
+-->
+        <!-- 
+    ★★ 병합 기능 ★★
+    - 표의 2칸 이상을 합치고 싶을 때 사용
+    - 위 아래를 병합 : rowspan
+    - 좌 우를 병합 : colspan
+    - 사용방법 : rowspan, colspan 을 속성에 넣고
+                병합하고 싶은 칸의 수만큼 값에 넣기
+                ex ) rowspan = "2"
+ -->
+        <!-- 
+    3 ) 테이블의 한 칸, 데이터를 넣는 공간
+        3-1) <td> : table data
+            -데이터를 넣어주는 공간
+        3-2) <th> : table header
+            -표의 헤더 부분을 작성할 때 사용
+            -글자가 굵어지고 가운데 정렬
+
+-->
+        <tr bgcolor="lightblue">
+            <th colspan="2">
+                메뉴
+            </th>
+        </tr>
+
+        <tr>
+            <td>아메리카노</td>
+            <td rowspan="2">3500</td>
+        </tr>
+
+        <tr>
+            <td>카페라떼</td>
+
+        </tr>
+
+    </table>
+
+</body>
+
+
+
+<table border="1px solid black" >
+    <caption>스마트인재개발원</caption>
+
+    <!-- 
+        (tr > th*4) * 5 
+    -->
+    <tr bgcolor="yellow">
+        <th>
+            이름
+        </th>
+        <th colspan="2">성별/주소</th>
+        <th>비고</th>
+
+    </tr>
+
+    <tr align="center">
+        <td>김수종</td>
+        <td>남자</td>
+        <td>광주</td>
+        <td rowspan="4">
+            <a 
+            href="https://www.youtube.com/watch?v=g6Bk0MeYejs" 
+            target="blank">
+            <img 
+            width="200px"
+            src="img/pic.png">
+            </a>
+        </td>
+    </tr>
+    <tr align="center">
+        <td>박덕근</td>
+        <td>남자</td>
+        <td>광주</td>
+    </tr>
+    <tr align="center">
+        <td>안현지</td>
+        <td>여자</td>
+        <td>곡성</td>
+    </tr>
+    <tr  align="center">
+        <td>박민</td>
+        <td>남자</td>
+        <td>광주</td>
+    </tr>
+
+
+
+</table>
+
+
+
+
+
+</html>
