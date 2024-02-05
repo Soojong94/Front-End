@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=
@@ -13,28 +14,105 @@
         - 사용자에게 정보를 받아주는 공간
         - 필수 속성 2가지 : method(전달 방식) , action(전달 위치)
      -->
-    <form align= "center" method="get" action="#">
-        
-        <h3>입력</h3>
-        <!-- 
+    <form align="center" method="get" action="#">
+        <font size="5" color="blue">
+            <h3>입력</h3>
+            <!-- 
             input 태그 : 사용자가 입력할 수 있는 공간
             ** 속성
             (1) name : 입력한 값을 구분하기 위해 이름을 지정 ★★★
+            = 그룹화 시키기 위함 (중복방지 용도가 아님)
             (2) placeholder : 미리보기 텍스트
             (3) autofocus : 자동 커서 설정
-            (4) value : 기본값 설정 ★★★
+            (4) value : 기본값 설정 
+            사용자가 값을 입력하면  value 에 저장됨 ★★★
             (5) readonly : 읽기 전용 지정
             (6) maxlength : 글자수 제한 지정
          -->
 
-        ID <input type = "text" name="ID" placeholder="아이디 입력" autofocus >
-        <br>
-        PW <input type = "password" maxlength="10">
-        <br>
-        주소 <input type = "text" name="address" value ="기찻길 옆 오막살이" readonly>
+            ID <input type="text" name="ID" placeholder="아이디 입력" autofocus>
+            <br>
+            PW <input type="password" maxlength="10">
+            <br>
+            주소 <input type="text" name="address" value="기찻길 옆 오막살이" readonly>
+            <br>
+            <!--
+            여러 개의 데이터를 선택해서 입력받는 <select>
+            사용 예시 ) 메일선택(네이버, 다음, 카카오)
+            value 값과 콘텐츠 값을 동일하게 진행해야함
+
+            실제 데이터를 입력하는 공간 <option>
+                * 중요한 점 : 반드시 value 안에 데이터를 넣어줄 것
+                * 이유 = 컴퓨터는 오직 태그 + 속성으로만 대화가 가능 / 컨텐츠(글자) -> 사용자가 이해하기 위한 데이터
+                * 선택해서 가져오는 것이기 때문에  value  를 미리 지정
+        -->
+            <select>
+                <option value="naver.com">naver.com</option>
+                <option value="daum.net">daum.net</option>
+                <option value="gmail.com">gmail.com</option>
+            </select>
+            <br>
+            <!--
+                사용자가 선택할 수 있는 checkbox vs radio
+                1) 공통점 = 사용자에게 선택을 받아서 입력을 한다.
+                2) 차이점 =  checkbox 는 복수개 선택이 가능
+                /radio 단수개 선택이 가능
+                -> name 과 value 를 지정해야한다
+                name = 그룹화를 시킬 때 사용
+                (같은 그룹인지 알아야 컴퓨터가 값을 이해)
+                value는 태그별로 가지고 있는 고유한 값 
+                (특정 값을 지칭하므로 중복되면 안 된다)
+             -->
+            <span>축구</span> <input type="checkbox" name="hobby" value="soccer">
+            <span>농구</span> <input type="checkbox" name="hobby">
+            <span>야구</span> <input type="checkbox" name="hobby">
+            <br>
+            <span>남자</span><input type="radio" name="gender" value="man">
+            <span>여자</span><input type="radio" name="gender" value="woman">
+            <br>
+            <!-- 
+                 그 외 다양한 인풋들
+              -->
+
+            <input type="file">
+            <input type="color">
+            <input type="number">
+            <input type="range">
+            <input type="datetime-local">
+            <input type="date">
+            <input type="text">
+            <input type="url">
+            <br>
+            <!-- 
+                1. 작성된 데이터를 전송할 때 사용하는 태그
+                <input type = "submit">
+                2. 작성된 데이터를 초기화 할 때 사용하는 태그
+                <input type= "reset">
+                3. 폼태그 내용 보낼 때 팁!
+                    - 폼태그 안에 button 태그를 쓰려면 반드시 타입을 명시
+                    - 폼태그 안에서 button  태그는 기본 값이 submit으로 잡혀있다.
+
+             -->
+            <button type="button">
+                회원가입
+            </button>
+            <input type="submit">
+            <br>
+            <input type="reset">
+            <br>
+            <!-- 
+                사용자에게 많은 양의 텍스트를 입력받는 공간
+                <textarea>
+             -->
+            <textarea cols="80" rows="5">
+            </textarea>
+             
+        </font>
+
 
 
     </form>
 
 </body>
+
 </html>
