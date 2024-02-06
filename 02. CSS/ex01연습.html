@@ -16,15 +16,35 @@
             -반드시 속성값을 입력한 다음에 ; 을 찍어줘야 한다.
             -기본적으로 선택자 안에 다른 선택자는 쓸 수 없음(라이브러리를 사용하면 가능)
 
+            
      -->
+    <!-- 
+
+        폰트를 설정하는 속성
+        1. 폰트를 변경할 때는 font-family
+            - 폰트를 복수개를 적는 경우가 대부분 
+            - 폰트가 없는 경우 "비슷한" 다른 폰트로 대체하기 위해서
+            -복수개의 폰트를 넣을 때는 비슷한 형태의 폰트를 작성해라
+        2. 폰트의 크기를 변경할 때는  font-size
+        3. 폰트의 두께를 변경할 때는 font-weight
+            - <b>의 역할을 디자인으로 만든 것
+        4. 폰트의 모습을 변경할 때는 font-style
+            - <i> 의 역할을 디자인으로 만든 것
+      -->
+      
     <style>
         h1 {
             color: chocolate;
+            font-family: 'Courier New', Courier, monospace;
             font-size: 50px;
+            font-weight: lighter;
+            font-style: italic;
         }
 
         p {
             color: green;
+            font-weight: bold;
+            font-style: italic;
         }
     </style>
 </head>

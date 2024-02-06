@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 
+        * 선택자는 범위가 좁을수록 우선 순위의 점수가 높다. 
+        1. 모든 태그를 선택하는 선택자 = 전체선택자 ( * ) 
+        -> 우선순위 점수 0점
+        2. 특정 태그를 선택하는 선택자 = 태그선택자 (태그명)
+        ->우선순위 점수 1점
+        3. 특정 태그들을 묶어서 선택하는 선택자 = 클래스선택자(.)
+        ->우선순위 점수 10점
+            - 특징 : 클래스명을 중복해서 여러 태그에 사용이 가능
+            - 사용처  : 중복이 가능하기에, 디자인(CSS)에서 가장 많이 사용된다.    
+        4. 특정 태그에게 고유한 값을 부여하는 선택자 = 아이디선택자(#)
+        -> 우선순위 점수 100점
+            -특징 : 아이디명은 중복해서 사용이 불가능 (고유한 값)
+            - 사용처 : 중복이 불가능하기에, 기능(JS) 에서 가장 많이 사용된다. 
+        우선순위 : id > class > 태그 > 전체
+        
+        
+        */
+
+        * {
+            color: indigo;
+        }
+
+        h1 {
+            color: blue;
+        }
+
+        p {
+            color: yellow;
+        }
+
+        .test {
+            color: green;
+        }
+
+        #pid {
+            color: purple;
+        }
+
+        #pid2 {
+            color: black;
+            border-style: solid;
+            border-color: blue;    
+            width: min-content;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <h1 class="test">첫번째</h1>
+    <h1>두번째</h1>
+    <p>첫번째</p>
+    <p class="test">두번째</p>
+    <p class="test" id="pid">세번째</p>
+    <p class="test">네번째</p>
+    <sapn id="pid2">다섯번째</span>
+
+
+        
+</body>
+
+</html>
