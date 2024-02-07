@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 
+            padding = 테두리와 컨텐츠 사이의 안쪽 여백 담당
+            * margin 과 사용방법이 같다. 단 , auto 만 없다
+            * 주의점 
+                - padding 은 안쪽 여백이기 때문에, 전체 크기가 증가
+                - box-sizing : border-box->컨텐츠, 테두리, 패딩의 크기를 합산해서 원래 크기를 유지
+            * 사용처 !
+                -테두리가 있는데, 컨텐츠(글자)를 안쪽으로 밀어 넣어서 보기 조햐게 만들 때 사용
+                -ex) 검색창에 패딩을 넣으면 검색창의 위치는 그대로인데, 글자가 가운데로 몰린다
+        */
+
+        div{
+
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            padding : 50px;
+            box-sizing: border-box;
+            overflow : scroll;
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <div>
+        <span>안녕하세요!!안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요
+        </span>
+    </div>
+
+</body>
+
+</html>

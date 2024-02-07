@@ -21,8 +21,12 @@
         -> 우선순위 점수 100점
             -특징 : 아이디명은 중복해서 사용이 불가능 (고유한 값)
             - 사용처 : 중복이 불가능하기에, 기능(JS) 에서 가장 많이 사용된다. 
-        우선순위 : id > class > 태그 > 전체
+        우선순위 : id (100)> class(10) > 태그(1) > 전체(0)
         
+        * 우선순위를 무시하는 방법 -권장X
+            - 사용방법 : 속상값 뒤에 !important 
+            - "!" 강제하겠다는 의미
+            - html 템플릿의 디자인을 수정할 때, 도저히 수정할 부분을 못 찾겠으면 직접 작성해서 important 를 넣을 것
         
         */
 
@@ -48,10 +52,13 @@
 
         #pid2 {
             color: black;
-            border-style: solid;
-            border-color: blue;    
-            width: min-content;
         }
+        #h1style{
+            color : yellow;
+       }
+       .h1class{
+        color:red !important;
+       }
     </style>
 
 
@@ -67,7 +74,7 @@
     <p class="test" id="pid">세번째</p>
     <p class="test">네번째</p>
     <sapn id="pid2">다섯번째</span>
-
+    <h1 id="h1style" class="h1class">강제로 스타일 변경 </h1>
 
         
 </body>
