@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 
+        테이블 내에 포지션 사용하기 연습  
+        background에 마진주는 것>가능한지 한번 찾아보기
+        줄마다 간격을 주고 border-color 를 transparent 로 변경하는 꼼수는 가능
+         */
+
+        table {
+            border: double 10px;
+            width: 1000px;
+            height: 600px;
+            /* 줄 높이 */
+            line-height: 3rem;
+            /* 콘텐츠 마진 */
+            margin: 1rem 0;
+            /* 콘텐츠 패딩 */
+            padding: 1rem 0;
+            /* 테두리 분리  */
+            border-collapse: separate;
+            /* 줄마다 간격을 줌 */
+            border-spacing: 0 1rem;
+        }
+
+        td {
+            text-align: center;
+            border: solid 2px;
+            background-position: center;
+            border-top: 1rem solid;
+            border-bottom: 1rem dotted;
+            border-color: gray;
+            background-size: 3000px;
+            width: 150px;
+            height: 150;
+            border: 2px solid;
+            color: black;
+        }
+
+        .ul1 {
+            background-color: green;
+        }
+        #block1 {
+            background-color: lightblue;
+        }
+
+        #block2 {
+            background-color: yellow;
+        }
+
+        #block3 {
+            background-color: pink;
+        }
+
+        #block4 {
+            background-color: indigo;
+        }
+
+        #block5 {
+            background-color: purple;
+        }
+
+        #block6 {
+            background-color: violet;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 테이블 내에 포지션 사용하기 연습 -->
+    <div>
+        <form>
+
+            <div>
+                <table>
+                    <div>
+                        <caption>
+                            <span>
+                                <strong>이것은 연습입니다</strong>
+                            </span>
+                        </caption>
+                    </div>
+                    <div>
+                        <tr>
+                            <th colspan="3">
+                                메뉴를 고르세요
+                            </th>
+                        </tr>
+                    </div>
+                    <div>
+                        <tr>
+                            <div>
+                                <td><span>에피타이저</span></td>
+                            </div>
+                            <div>
+                                <td><span>메인</span></td>
+                            </div>
+                            <div>
+                                <td><span>후식</span></td>
+                            </div>
+                        </tr>
+                    </div>
+                    <div>
+                        <tr>
+                            <div>
+                                <td id="block1">
+                                    <ul class="ul1">
+                                        <li><input type="text" name="soup" placeholder="원하는 수프 입력">수프</li>
+                                        <li><input type="text" name="sandwich" placeholder="원하는 샌드위치 입력">샌드위치</li>
+                                    </ul>
+                                </td>
+                            </div>
+                            <div>
+                                <td id="block2">
+                                    <ol type="A">
+                                        <li>한우스테이크</li>
+                                        <li>생선스테이크</li>
+                                        <li>고급짜장면</li>
+                                    </ol>
+                                </td>
+                            </div>
+                            <div>
+                                <td id="block3">
+                                    <ul>
+                                        <li>아이스크림</li>
+                                        <li>후식볶음밥</li>
+                                    </ul>
+                                </td>
+                            </div>
+                        </tr>
+                    </div>
+                    <div>
+                        <tr>
+                            <td id="block4">여기는 꾸미기4</td>
+                            <td id="block5">여기는 꾸미기5</td>
+                            <td id="block6">여기는 꾸미기6</td>
+                        </tr>
+                    </div>
+                </table>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
