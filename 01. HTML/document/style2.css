@@ -1,0 +1,64 @@
+
+
+/* 
+테이블 내에 포지션 사용하기 연습  
+background에 마진주는 것>가능한지 한번 찾아보기
+줄마다 간격을 주고 border-color 를 transparent 로 변경하는 꼼수는 가능
+ */
+
+table {
+    border: double 10px;
+    width: 1000px;
+    height: 600px;
+    /* 줄 높이 */
+    line-height: 3rem;
+    /* 콘텐츠 마진 */
+    margin: 1rem 0;
+    /* 콘텐츠 패딩 */
+    padding: 1rem 0;
+    /* 테두리 분리  */
+    border-collapse: separate;
+    /* 줄마다 간격을 줌 */
+    border-spacing: 0 1rem;
+}
+
+td {
+    text-align: center;
+    border: solid 2px;
+    background-position: center;
+    border-top: 1rem solid;
+    border-bottom: 1rem dotted;
+    border-color: gray;
+    background-size: 3000px;
+    width: 150px;
+    height: 150;
+    border: 2px solid;
+    color: black;
+}
+
+.ul1 {
+    background-color: green;
+}
+#block1 {
+    background-color: lightblue;
+}
+
+#block2 {
+    background-color: yellow;
+}
+
+#block3 {
+    background-color: pink;
+}
+
+#block4 {
+    background-color: indigo;
+}
+
+#block5 {
+    background-color: purple;
+}
+
+#block6 {
+    background-color: violet;
+}
