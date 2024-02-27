@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        // 호이스팅 현상 : 코드가 실행되면 변수, 함수 미리 저장해둔다.
+        // 선언되기 전에 사용하더라도 ok
+        // 오류가 X -> 협업에 불편함
+        
+        // let도 호이스팅이 일어나긴 함
+        // 다만 TDZ(Temporal Death Zone)에 저장해둠
+        // 선언이 나오기 전까지는 접근을 못하게 만들어주는 것
+
+        //      재선언 재할당 호이스팅
+        // var   O      O       O
+        // let   X      O       O,TDZ
+        // const X      X       O,TDZ
+
+        console.log(color);
+        console.log(color2);
+
+        // 변수 : 데이터를 담을 수 있는 공간
+
+        // (1) var : 
+        var color = "black"; // 선언
+        var color = "pink"; // 재선언 가능
+        color = "yellow"; // 재할당 가능
+
+
+
+        // ES6 문법 이후 등장한 새로운 키워드 : let, const
+
+        // (2) let
+        let color2 = "black"; //최초 선언
+        // let color2 = "pink" // 재선언 불가능
+        color2 = "yellow"; // 재할당 가능
+
+        console.log('let', color2)
+
+
+        // (3) const
+        // 누군가가 재선언하거나 재할당해서는 안 되는 변하지 않는 값
+        // ex ) 게임 만렙 , 예산
+        const color3 = "black";
+        // color3 = "yellow";
+        console.log('const', color3)
+
+    </script>
+</body>
+</html>

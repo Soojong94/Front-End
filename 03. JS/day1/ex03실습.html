@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // 1. 사용자의 이름을 입력 받는다('이름')
+        // 2. 신청곡을 입력 받는다('뭐 들을래')
+        // 3. console 창에 출력문
+        //      "xxx 님이 신청하신 노래는 xxx 입니다."
+
+        const name = prompt('이름이 뭐에요' , '');
+        const song = prompt('뭐 들을까요' , '');
+
+        // 변수, 텍스트를 이어서 출력하는 방법 3가지
+        // 1) , (쉽표)
+        console.log(name," 님이 신청하신 노래는", song, "입니다"); 
+
+        // 2) + (연산)
+        console.log(name+" 님이 신청하신 노래는"+ song+"입니다"); 
+
+        // 3) `(백틱) ${}`
+         console.log(`${name}님이 신청하신 노래는${song} 입니다.`); 
+
+        // 4. 캡쳐
+
+
+       
+        console.log(name," 님이 신청하신 노래는", song, "입니다"); 
+
+    </script>
+
+</body>
+</html>

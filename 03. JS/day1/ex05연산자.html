@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        
+        // 연산자
+        // [A] JAVA 연산자와 다른 것
+        
+
+        // (1) 나누기 연산자 : 나눈 실제 값
+        console.log('/', 100 / 3 ); 
+        console.log('%', 100 % 3 ); // 나머지 연산자 
+
+        // (2) 비교연산자 - 일치연산자
+        // == : 비교연산자, 값만 비교('3' == 3 : true)
+        // === : 일치연산자, 값 / 데이터타입을 모두 비교('3' === 3 : false)
+        console.log(3=='3')
+        console.log(3==='3')
+        
+        // [B] JAVA 연산자와 같지만 중요해서 한번 더
+        
+        // (3) 삼항연산자 : 조건 ? 실행문1 : 실행문2
+
+        let dinner = true; 
+
+        // case1 ) 실행문을 바로 실행
+        dinner === true
+        ? console.log('카페 갈래?')
+        : console.log('저녁 먹으러 갈래?');
+
+        // case2 ) 변수에 대입
+        let myQ = dinner === true ? '카페 갈래?' : '밥묵을래?';
+        console.log(myQ);
+
+        // (4) 논리연산자
+        // && (모두 참이어야만 true)
+        // || (둘 중 하나만 참이어도 true)
+
+        // ============================================================
+        // 숫자의 백의 자리 이하를 버려줄 것
+        // num = 788 -> 700 / num = 345 -> 300
+
+        let num = 123;
+
+        // 결과값 : console 창에 백의 자리 이하 버린 결과 >> 100
+
+        let num2 = num % 100;
+        console.log(num-num2);
+
+
+    </script>
+
+</body>
+</html>
