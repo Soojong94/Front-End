@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // 코로나 검사 프로그램
+
+        // 1) 코로나 검사 여부를 확인(confirm)
+        //      코로나 검사 하셨나요 -> 확인 or 취소
+        let cold = confirm('코로나 검사 하셨슈');
+
+        // 2-1) 확인 양성/음성 여부 확인
+        if (cold == true) {
+            let conf = prompt('양성인가요 음성인가요')
+
+            //      검사결과가 양성인가요 음성인가요
+
+            // 3-1 ) 양성이라면 '마스트를 잘 쓰고 방역에 주의하세요' 팝업창
+            // 배경색 빨강색
+            if (conf === '양성') {
+                alert('마스트를 잘 쓰고 방역에 주의하세요')
+                document.getElementsByTagName('body')[0].style.backgroundColor = 'red';
+
+            }
+
+
+            // 3-2 ) 음성이라면 '음성입니다 조심히 가세요' 팝업창
+            if (conf === '음성') {
+                alert('음성입니다 조심히 가세요')
+                document.getElementsByTagName('body')[0].style.backgroundColor = 'green';
+            }
+            // 배경색 초록색
+        }
+
+        // 2-2) 취소 팝업창으로 '검사하고 오세요'
+        else {
+            alert('검사하고 오세요');
+            document.getElementsByTagName('body')[0].style.backgroundColor = 'purple';
+        }
+
+    </script>
+
+</body>
+
+</html>

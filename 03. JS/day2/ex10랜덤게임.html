@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. 랜덤 숫자 뽑기  1~100
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'violet';
+        let random = parseInt(Math.random() * 100);
+        console.log('ranNum', random)
+
+
+        // 3. 게임 결과 판정
+        // 사용자 숫자 == '정답입니다. 축하합니다.'
+        // 사용자 숫자 > == '입력한 숫자보다 작은 수 입니다.'
+        // 사용자 숫자 < == '입력한 숫자보다 큰 수 입니다'
+
+
+        while (true) {
+            // 2. 사용자에게 숫자를 입력 받기
+
+            let num = parseInt(prompt('1~100 사이의 숫자 입력'))
+
+            if (random === num) {
+                alert('정답입니다. 축하합니다.')
+                break;
+            } else if (random > num) {
+                alert('입력한 숫자보다 큰 수 입니다.')
+            }
+            else if (random < num) {
+                alert('입력한 숫자보다 작은 수 입니다.')
+            } else {
+                alert('숫자값을 입력하십슈')
+            }
+        }
+
+    </script>
+</body>
+
+</html>

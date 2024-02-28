@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // 형변환
+        
+        // (1) 숫자로
+
+        // a. 정수로 형변환 : parseInt()
+        let textFloat ='3.14';
+        let num1 = parseInt(textFloat);
+        console.log('정수로', num1)
+
+
+        // b. 실수로 형변환 : parseFloat()
+        let num2 = parseFloat(textFloat)
+        console.log('실수로', num2)
+
+        // c. 숫자로 형변환 : Number()
+        let num3 = Number(textFloat)
+        console.log('숫자로', num3)
+
+
+        // (2) 문자로
+
+        let number = 56;
+        console.log(number +"")
+        console.log(String(number))
+        console.log(number.toString(2))
+        console.log(number + 3)
+        
+        // ============================================
+        // 숫자 두개 입력 받기
+        // 두개의 숫자를 더한 결과와 뺀 결과를 alert 로 출력하기
+
+        // ex) 100 / 200 => 300, -100 입니다
+        // (단, alert 창에서는 , 로 문자를 더할 수 없음)
+
+        num1 = prompt('첫번째 숫자입력');
+        num2 = prompt('두번째 숫자입력');
+
+        alert(`${num1} 와(과) ${num2}에 대한 결과값은 ${parseFloat(num1)+parseFloat(num2)}
+        , ${parseFloat(num1)-parseFloat(num2)} 입니다.`);
+        
+        num3 = parseInt(prompt('첫번째 숫자입력'));
+        num4 = parseInt(prompt('두번째 숫자입력'));
+        
+        alert(`${num3} 와(과) ${num4}에 대한 결과값은 ${num3+num4}
+        , ${num3-num4} 입니다.`);
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

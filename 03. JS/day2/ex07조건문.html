@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // step1 사용자에게 색을 입력 받아보자
+        // (색깔을 적어주세요 (빨,파,초))
+        // step2 사용자가 입력한 색에 따라서 console 창에 다른 내용 출력
+        // 입력한 색깔은 'color'입니다
+
+        let color = prompt('색깔을 적어주세요(빨,파,초)');
+        if(color === '빨'){
+            // 뒤에서 배울 DOM 문법(Document Object Model)
+            document.getElementsByTagName('body')[0].style.backgroundColor='red';
+            console.log(`사용자가 입력한 색깔은 빨강입니다`)
+        }else if(color === '파'){
+            document.getElementsByTagName('body')[0].style.backgroundColor='blue';
+            console.log(`사용자가 입력한 색깔은 파랑입니다`)
+        }else if(color === '초'){
+            document.getElementsByTagName('body')[0].style.backgroundColor='green';
+            console.log(`사용자가 입력한 색깔은 초록입니다`)
+        }else{
+            console.log('다른 색상을 입력해주세요')
+        }
+
+    </script>
+
+
+</body>
+</html>
