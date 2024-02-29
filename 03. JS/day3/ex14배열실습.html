@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // 가위바위보 게임
+        // 컴퓨터는 랜덤하게  / 사용자는 선택
+        // '무엇을 내시겠습니까?'
+
+        // 1. arr 이라는 배열 안에 '가위' , '바위', '보' 라는 데이터 할당
+        let arr = ['가위', '바위', '보'];
+
+        // 2. 사용자의 선택을 입력받습니다
+        // '무엇을 내시겠습니까?(가위, 바위, 보)'
+        let user = prompt('무엇을 내시겠습니까?');
+
+        // 3. 컴퓨터의 선택을 세팅
+        let index = parseInt(Math.random()*3);
+        
+        // (0,1,2) 라는 랜덤한 숫자를 이용해서 랜덤한 값을 추출
+        let com = arr[index];
+        
+
+        // 4. 나의 선택 / 컴퓨터의 선택 console 창에 
+        console.log('나의 선택 : ', user);
+        console.log('컴퓨터 선택 : ', com)
+
+        // 5. 가위바위보의 결과를 출력 (사용자 입장에서 승리, 패배, 무승부)
+        if(user === com){
+            console.log('무승부')
+        }
+        else if(user==='가위' && com === '바위'){
+            console.log('패배!!!!')
+        }else if(user==='가위' && com === '보'){
+            console.log('승리!!!!')
+        }
+        else if(user==='바위' && com === '보'){
+            console.log('패배!!!!')
+        }
+        else if(user==='바위' && com === '가위'){
+            console.log('승리!!!!')
+        }
+        else if(user==='보' && com === '가위'){
+            console.log('패배!!!!')
+        }
+        else if(user==='보' && com === '바위'){
+            console.log('승리!!!!')
+        }
+
+        /*
+        선생님 코드  : 삼항 연산자 사용
+        result = '무승부'
+        ---------------------------
+        else if(user ==='보')
+        result = com === '바위' ? '승리' : '패배'
+        */
+
+
+
+        // console 창에 결과 출력
+
+        
+        
+
+
+    </script>
+    
+</body>
+</html>

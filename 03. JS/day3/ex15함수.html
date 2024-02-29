@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+
+        // 함수 또한 호이스팅 현상이 일어남(밑에서 선언해도 실행이 가능함) - 협업에 안 좋음
+        makeAnyJuice('두리안');
+
+
+
+        // 함수 = 특정 기능들을 묶어서 호출할 수 있는 기능
+        //      사용자가 직접 만드는 기계
+        // console.log("===================")
+        // console.log("오렌지 주스 제조 시작")
+        // console.log("오렌지를 착즙한다")
+        // console.log("주스 완성!🍊")
+        // console.log("===================")
+
+
+        // (1) 함수의 선언 : 
+        // function 함수이름(){}
+        // () - 매개변수 : 함수의 재료
+        // {} - 함수를 호출했을 때 실행시킬 로직
+
+        function makeJuice() {
+
+            console.log("===================")
+            console.log("오렌지 주스 제조 시작")
+            console.log("오렌지를 착즙한다")
+            console.log("주스 완성!🍊")
+            console.log("===================")
+
+        }
+
+        // (2) 함수의 호출 : 함수 이름()
+
+        makeJuice();
+
+
+        // (3) 매개변수를 이용한 함수
+
+        function makeAnyJuice(fruit) {
+
+            console.log("===================")
+            console.log(fruit + "주스 제조 시작")
+            console.log(fruit + "을(를) 착즙한다")
+            console.log("주스 완성!!")
+            console.log("===================")
+
+        }
+
+        // (4) return 을 이용한 함수 : 값을 주는 함수
+        function makeRandom() {
+            return parseInt(Math.random() * 3);
+        }
+        console.log(makeRandom());
+        document.write(makeRandom());
+
+        // (5) 호이스팅 현상을 방지
+        // const makeToast = function(){
+        //     console.log('토스트완성!');
+        // }
+
+        // **화살표 함수 (Arrow function)
+        // const 함수이름 = () => {}
+        // 재선언, 재할당, 호이스팅을 모두 방지하기 위해 const 사용
+        // Q. 결과가 바뀌는데 왜 const를 쓰나요
+        // A. 함수 (기계) 자체를 보호하기 위해서
+
+        const makeToast = () => {
+            console.log('toast 완성')
+        }
+        makeToast();
+
+        // =========================================
+
+        // 1. 2개의 함수를 제작할 것 (plus, minus)
+        // 2. plus -> 내가 넣은 두개의 숫자를 더해서 return
+        // 3. minus -> 내가 넣은 두개의 숫자를 빼서 return
+        // 단, 더 큰 수 - 더 작은 수
+        // 4. plus(5,2) 호출 / minus (2,4)
+        // 콘솔창에 호출
+
+        const plus = (a, b) => {
+            return a + b;
+        }
+        const minus = (a, b) => {
+            return Math.abs(a - b);
+        }
+
+        console.log(('plus  결과 : ', plus (5, 2)))
+        console.log(('minus 결과 : ', minus (2, 4)))
+
+
+
+    </script>
+
+</body>
+
+</html>
