@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- h1#h1Tag-->
+    <h1 id="h1Tag">안녕하세유</h1>
+
+    <!-- p.num*2 -->
+    <p class="num">p태그1</p>
+    <p class="num">p태그2</p>
+
+    <script>
+        /*
+            DOM 객체 (Document Object Modeling) document 를 object로 변환하는 작업
+            : HTML 문서 내에 요소들을 전부 단일 요소로 하나하나 쪼개주는 개념(객체화)
+
+            ex) <h1 id="h1Tag"> 하이</h1>
+                -> h1 (태그) , id(속성), h1Tag(속성에 대한 값), 하이(Content)
+
+            쪼개주는 이유 : 각각 단일 요소들에 접근해서  JS 문법을 사용하기 위함이다.
+
+        
+        */
+
+        // step 1 ) id 가 h1Tag인 요소를 가져와보자
+        // 1. HTML 접근 : document
+        // 2. 객체에 접근 : .
+        // 3. 가지고 오다 : get
+        // 4. 요소를 : Element
+        // 5. ~통해서 : By~
+
+        let h1Tag = document.getElementById('h1Tag');
+        console.log(h1Tag);
+
+        // step 2 ) 내가 가져온 요소에서 컨텐츠만 추출
+        // - 안에 있는 (inner) 텍스트만 (Text) -> innerText
+        console.log(h1Tag.innerText);
+
+
+        // step3 ) 내가 가져온 요소에서 컨텐츠를 수정해보자
+        // - 내가 가져온 요소.innerText= '바꿀 값';
+        //  h1Tag.innerText = '안녕히가세요';
+
+         // step4 ) 내가 가져온 요소에서 HTML 요소를 포함해서 수정
+        h1Tag.innerHTML = '<a href = "#"> 안녕히가세용가리</a>';
+
+        console.log(h1Tag.innerText);
+
+
+        // ==================================
+
+        // 클래스를 통해 요소를 가져와보자
+        // 1. 클래스가  num 인 요소를 가져오기
+        let ptag = document.getElementsByClassName('num');
+        console.log(ptag);  // 배열과 비슷한 형태
+        console.log(ptag[0]);
+
+        // 2. 가져온 요소의 내용을 수정
+        ptag[0].innerText = '수정한 내용';
+       
+        // class가 num 인 모든 데이터를 다 가져오고 싶다면 for 문 사용
+        for(let i = 0 ; i < ptag.length; i++){
+            console.log(ptag[i].innerText);
+        }
+
+    </script>
+
+</body>
+
+</html>

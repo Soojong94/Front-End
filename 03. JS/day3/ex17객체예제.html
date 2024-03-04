@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
 
     <script>
@@ -25,37 +27,50 @@
 
 
         let pokemon = [
-            {   name : '안농',
-                type : '에스퍼',
-                skill : '텔레파시'
+            {
+                name: '안농',
+                type: '에스퍼',
+                skill: function () {
+                    console.log("잠재파워")
+                }
             },
-            {   name : '잉어킹',
-                type : '물',
-                skill : '뛰어오르기'
+            {
+                name: '잉어킹',
+                type: '물',
+                skill: function () {
+                    console.log("뛰어오르기")
+                }
             },
-            {   name : '갸라도스',
-                type : '물',
-                skill : '용의분노'
+            {
+                name: '갸라도스',
+                type: '물',
+                skill: function () {
+                    console.log("용의분노")
+                }
             }
         ]
-        
-    
 
-    let pokemonNames = '제가 가지고 있는 포켓몬은 ';
+
+
+        let pokemonNames = '제가 가지고 있는 포켓몬은 ';
         for (let i = 0; i < pokemon.length; i++) {
             pokemonNames += pokemon[i].name;
             if (i < pokemon.length - 1) {
                 pokemonNames += ', ';
             }
         }
+
+        console.log(`제가 가지고 있는 포켓몬은 ${pokemon[0].name}, ${pokemon[1].name}, ${pokemon[2].name}입니다.`)
+
         pokemonNames += '입니다';
         console.log(pokemonNames);
 
         console.log('제가 가장 좋아하는 포켓몬은 ' + pokemon[0].name, '이고 ' + pokemon[0].type, '입니다')
-        
-        console.log(pokemon[0].skill)
+            
+            pokemon[0].skill() 
 
     </script>
 
 </body>
+
 </html>
