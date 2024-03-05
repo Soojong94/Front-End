@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="name">
+    <button id="btn">변경!</button>
+    <img src="#" width="400px" id="imgTag">
+
+
+
+    <script>
+        let url1 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuklN0M-SxkOb5_3DU7y-L7vAJJjj-LM1MdQ&usqp=CAU";
+        let url2 = "https://blog.kakaocdn.net/dn/cYnypO/btrzcSaVpNa/VwDfLj2yOWZDKpAhZIlYJ1/img.jpg";
+
+        let btn = document.getElementById('btn');
+
+        btn.addEventListener('click', () => {
+
+            let inputText = document.getElementById('name');
+            console.log(inputText.value);
+            let imgTag = document.getElementById('imgTag');
+            if (inputText.value == '사진1') {
+                imgTag.src = url1;
+            } else if (inputText.value == '사진2') {
+                imgTag.src = url2;
+            } else {
+                alert('잘못 입력하셨습니다')
+            }
+        })
+
+        // Step 1) 사진 두개의 이미지 주소를 구한다 (url1, url2)
+        // Step 2) '변경!' 이라는 버튼을 클릭 시,
+        // Step 3) 사용자가 input 태그 아니에 작성한 내용을 감지 => InputText
+        // Step 4) console창에 확인용으로 찍어줄 것
+        // Step 5) 조건에 맞게 사진을 배치할 것
+        // '사진1', '사진2' 이라고 입력시 / 나머지 -> 잘못 입력하셨습니다
+
+    </script>
+
+</body>
+
+</html>

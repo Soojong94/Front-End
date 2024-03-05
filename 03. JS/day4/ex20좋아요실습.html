@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+
+            width: 200px;
+            height: 200px;
+            margin : 30px auto;
+            padding : 30px;
+            background-color: violet;
+
+        }
+</style>
+</head>
+
+<body>
+
+    <p>
+        
+        삼겹살👍
+        <br>
+        <br>
+        <span id="number">0</span>
+    </p>
+    <button id="like">👍좋아요👍</button>
+    <button id="hate">👎싫어요👎</button>
+
+    <script>
+
+        //** 좋아요 싫어요 버튼 만들기 실습
+        // 좋아요 버튼 클릭 시, 숫자가 1씩 증가
+        // 싫어요 버튼 클릭 시, 숫자가 1씩 감소
+        // 단, 0 밑으로는 내려가지 않도록 할 것
+
+        // Step 1. 좋아요를 눌렀을 때 호출할 'like' 함수 생성
+        // 1-1) like 함수 생성
+
+        /** 좋아요 눌렀을 때 숫자 증가하는 함수 */
+        function like(click) {
+            console.log('like function')
+        }
+        // 1-2 ) console 창에 like function 출력
+
+        // Step 2. 싫어요를 눌렀을 때 호출할 'hate'  함수 생성
+        // 2-1 ) hate 함수를 생성
+        function hate(click) {
+            console.log('hate function')
+        }
+        // 2-2 ) console 창에 'hate function'출력
+
+        // Step 3. 각각 버튼에 이벤트
+        // 3-1) 좋아요 버튼을 눌렀을 때, like 함수 호출
+        let likeBtn = document.getElementById('like');
+        likeBtn.addEventListener('click', like)
+
+
+        // 3-2) 싫어요 버튼을 눌렀을 때, hate 함수 호출
+        let hateBtn = document.getElementById('hate');
+        hateBtn.addEventListener('click', hate)
+
+        // Step 4. 실제 로직을 작성
+        // 4-1) like 함수 호출 시, id가 number 인 sapn태그 안의 값이 1씩 증가하도록 함수 로직 변경
+
+        let num = parseInt(document.getElementById('number').innerText);
+        
+        // 파싱 대신 (number) 를 앞에 붙여줘도 됨
+
+
+        likeBtn.addEventListener('click', () => {
+            num++;
+            document.getElementById('number').innerHTML = num;
+        })
+        // 4-2) like 함수 호출 시, id가 number 인 sapn태그 안의 값이 1씩 감소하도록 함수 로직 변경
+        hateBtn.addEventListener('click', () => {
+            if (num != 0) {
+                num--;
+                document.getElementById('number').innerHTML = num;
+            }
+        })
+
+        // 4-3) 단, 0이하로는 숫자가 떨어지지 않도록 
+
+
+
+    </script>
+
+</body>
+
+</html>

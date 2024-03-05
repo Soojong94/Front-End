@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+body{
+    background-color: pink;
+}
+        
+    </style>
+</head>
+
+<body>
+
+    <input type="text" id="inputText">
+    <button id="inputBtn">input 태그 값 가져오기</button>
+    <div id="place"></div>
+
+    <img src="https://cdn.mkhealth.co.kr/news/photo/202011/51247_51540_490.jpg" id="imgTag" width="200px">
+    <button id="getImgBtn">이미지 값 불러오기</button>
+    <button id="setImgBtn">이미지 변경하기</button>
+
+
+    <script>
+
+        // DOM 을 이용해서 속성값, 사용자 입력값을 가져오거나, 바꿔보자
+
+        // 1. 사용자가 input 태그 안에 입력한 value 값 가져오기: 요소, value
+        document.getElementById('inputBtn').addEventListener('click', () => {
+            console.log('inputBtn click');
+
+
+            // input 태그 안에 사용자가 입력한 값 가져오기
+            let inputTag = document.getElementById('inputText');
+            console.log(inputTag.value);
+
+            // 공간에 사용자가 입력한 값으로 세팅하기
+            document.getElementById('place').innerHTML = inputTag.value;
+
+            // value 안에 있는 값 초기화 
+            inputTag.value = "";
+
+        });
+
+
+        // 2. 태그에 접근해서 속성값을 출력하거나 변경하기
+        // 2-1) img 태그에 접근해보자
+        document.getElementById('getImgBtn').addEventListener('click', ()=>{
+
+            console.log('getImgBtn Ck')
+
+            // 현재  img 의 속성값 출력
+            let imgTag = document.getElementById('imgTag')
+            
+
+            // case 1 ) 이미지요소.속성이름
+            console.log(imgTag.width);
+            console.log(imgTag.src);
+            console.log(imgTag.id);
+
+            // case 2 ) getAttribut('속성이름')
+            console.log(imgTag.getAttribute('src'))
+            console.log(imgTag.getAttribute('width'))
+            console.log(imgTag.getAttribute('id'))
+        
+        })
+
+        // 2-2 ) img 태그에 접근해서 속성을 수정해보자
+        document.getElementById('setImgBtn').addEventListener('click', ()=>{
+
+            console.log('setImgBtn ck')
+            // 현재  img 의 속성값 출력
+            let imgTag = document.getElementById('imgTag')
+
+            // case 1) 요소, 속성이름 = '바꿀 값'
+            imgTag.src = "https://mblogthumb-phinf.pstatic.net/MjAyMDA1MjVfMTgz/MDAxNTkwMzc5MzE0ODY4.pXbWAk29HBcChUMtivGl1gX59h3yzS7eonlMqB5WFJMg.gkF1SOMh_csgyqWaH0sLHjRXvRP0ew-pzqQeKhA7W1Eg.JPEG.petmanageracademy/%EA%B0%95%EC%95%84%EC%A7%80_%EC%82%AC%EB%A3%8C_%EB%AC%BC%EA%B3%A0_%EC%9D%B4%EB%8F%99_01.jpg?type=w800"
+
+            // case 2) setAttribute ('바꿀 속성', '바꿀 값')
+            imgTag.setAttribute('width', '300');
+        })
+
+
+
+
+    </script>
+    
+
+
+</body>
+
+</html>
