@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          button {
+            padding: 10px 20px; /* 패딩 설정 */
+            background-color: blueviolet; /* 배경색 설정 */
+            color: white; /* 텍스트 색상 설정 */
+            border: 1px solid black; /* 테두리 제거 */
+            border-radius: 500px; /* 테두리 모서리 둥글게 설정 */
+            cursor: pointer; /* 커서 모양 변경 */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+            
+            transition: background-color 0.3s ease; /* 배경색 변화에 대한 전환 설정 */
+        }
+
+        /* 버튼에 호버 효과 */
+        button:hover {
+            background-color: #00ff0d; /* 호버 시 배경색 변경 */
+        }
+
+        /* 버튼에 클릭 효과 */
+        button:active {
+            background-color: #3e8e41; /* 클릭 시 배경색 변경 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 클릭 시 그림자 효과 조절 */
+        }
+    </style>
+</head>
+
+<body>
+
+    <span id="num">0</span>
+    <br>
+    <button id="plus" >+1</button>
+    <button id="minus">-1</button>
+
+    <script>
+        // 카운터 만들기 실습
+        // 1. plus 버튼을 눌렀을 때 숫자가 1씩 증가
+        // 2. minus 버튼을 눌렀을 때 숫자가 1씩 감소
+        // 0 밑으로 숫자가 떨어지지 않도록 할 것
+        // ** 조건 : v-JS  문법이 아닌 jQuery 문법으로 풀 것
+
+        let element = $('#num');
+        let cnt = 0;
+
+        $('#plus').click(() => {
+            cnt++;
+            element.text(cnt);
+        })
+        $('#minus').click(() => {
+            if (cnt > 0) {
+                cnt--;
+                element.text(cnt);
+            }
+        })
+
+
+    </script>
+
+</body>
+
+</html>
