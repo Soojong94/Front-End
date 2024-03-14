@@ -1,93 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-</head>
+  </head>
 
-<body>
-
-    <img id="pic" width="200px" src="https://newsimg.sedaily.com/2019/09/04/1VO45O5N53_3.jpg" />
-    <p id="abc">여러분 안녕하세요~ </p>
+  <body>
+    <img
+      id="pic"
+      width="200px"
+      src="https://newsimg.sedaily.com/2019/09/04/1VO45O5N53_3.jpg"
+    />
+    <p id="abc">여러분 안녕하세요~</p>
     <input type="text" id="inputTxt" />
     <button id="btn">내용 변경!</button>
-    <br>
+    <br />
     <button id="style-btn">스타일 변경</button>
     <button id="pic-btn">사진 변경</button>
 
-
     <script>
+      // jQuery 문법의 기호 : $
 
-        // jQuery 문법의 기호 : $
+      // 1. id가 'abc' 인 요소를 가져오기
+      // v-JS : document.getElementById('abc')
 
-        // 1. id가 'abc' 인 요소를 가져오기
-        // v-JS : document.getElementById('abc')
+      let element = $("#abc");
+      console.log("요소", element);
 
-        let element = $('#abc');
-        console.log('요소', element)
+      // 2. 내가 원하는 요소 안의 내용만 가져오기
+      // v-JS : .innerText
+      // jQuery : .text()
+      let txt = element.text();
+      console.log("txt", txt);
 
-        // 2. 내가 원하는 요소 안의 내용만 가져오기
-        // v-JS : .innerText 
-        // jQuery : .text()
-        let txt = element.text()
-        console.log('txt', txt)
+      // 3. 내가 원하는 요소 수정해보기
+      // v-JS : .innerText = "바꿀 값"
+      // jQuery : .text('바꿀 값')
 
+      element.text("<h1>사람을 찾습니다</h1>");
 
-        // 3. 내가 원하는 요소 수정해보기
-        // v-JS : .innerText = "바꿀 값"
-        // jQuery : .text('바꿀 값')
+      // 4. 태그 요소까지 포함해서 수정하기
+      // v-JS : innerHTML = "태그와 바꿀 값"
+      // jQuery : .html('태그와 바꿀 값')
+      element.html("<h1>사람을 찾습니다</h1>");
 
-        element.text('<h1>사람을 찾습니다</h1>');
+      // 5. 버튼을 눌렀을 때, input 태그 값으로 내용을 변경
+      // 5-1) 버튼 이벤트
+      // v-JS : .addEventListener('click', 함수)
+      // jQuery : .click(함수)
+      $("#btn").click(() => {
+        console.log("btn ck");
 
-        // 4. 태그 요소까지 포함해서 수정하기
-        // v-JS : innerHTML = "태그와 바꿀 값"
-        // jQuery : .html('태그와 바꿀 값')
-        element.html('<h1>사람을 찾습니다</h1>')
+        // 5-2) 사용자가 input 안에 입력한 값 가져오기
+        // v-JS : .value
+        // jQuery : .val()
+        let val = $("#inputTxt").val();
+        console.log("input", val);
 
-        // 5. 버튼을 눌렀을 때, input 태그 값으로 내용을 변경
-        // 5-1) 버튼 이벤트 
-        // v-JS : .addEventListener('click', 함수)
-        // jQuery : .click(함수)
-        $('#btn').click(() => {
-            console.log('btn ck')
+        element.text(val);
+        $("#inputTxt").val("");
+      });
 
+      // 6. 스타일 변경
+      // v-JS : .style.속상 = '값'
+      // jQuery : .css('속성', '값')
 
-            // 5-2) 사용자가 input 안에 입력한 값 가져오기
-            // v-JS : .value
-            // jQuery : .val()
-            let val = $('#inputTxt').val()
-            console.log('input', val)
+      $("#style-btn").click(() => {
+        if (element.css("color") === "rgb(255, 105, 180)") {
+          element.css("color", "black");
+        } else {
+          element.css("color", "hotpink");
+        }
+      });
 
-            element.text(val)
-            $('#inputTxt').val("")
-            
-        })
-
-        // 6. 스타일 변경
-        // v-JS : .style.속상 = '값'
-        // jQuery : .css('속성', '값')
-
-        $('#style-btn').click(() => {
-    if (element.css('color') === 'rgb(255, 105, 180)') {
-        element.css('color', 'black');
-    } else {
-        element.css('color', 'hotpink');
-    }
-});
-
-        // 7. 속성변경
-        // v-JS : .속성
-        // jQuery : .attr()
-        $('#pic-btn').click(()=>{
-            $('#pic').attr('src', 'https://blog.kakaocdn.net/dn/529Ed/btrBAQf18FA/v0fhYCYRAXVHH7eHSm6a0K/img.jpg');
-        })
-
-
+      // 7. 속성변경
+      // v-JS : .속성
+      // jQuery : .attr()
+      $("#pic-btn").click(() => {
+        $("#pic").attr(
+          "src",
+          "https://blog.kakaocdn.net/dn/529Ed/btrBAQf18FA/v0fhYCYRAXVHH7eHSm6a0K/img.jpg"
+        );
+      });
     </script>
-
-</body>
-
+  </body>
 </html>
